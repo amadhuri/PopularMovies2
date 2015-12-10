@@ -17,7 +17,7 @@ import java.net.URL;
  * Created by Madhuri on 11/18/2015.
  */
 public class JSONLoader {
-    private static final String API_KEY="fd4716d355d65747ee6346775f15f206";
+    private static final String API_KEY="api_key";
     private static final String MOVIE_BASE_URI = "http://api.themoviedb.org/3";
     private static final String TAG = JSONLoader.class.getSimpleName();
 
