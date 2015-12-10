@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" android:showAsAction="never" />
+   <!-- <item android:id="@+id/highest_rated" android:title="@string/highest_rated"
+        android:orderInCategory="100" android:showAsAction="never" />
+    <item android:id="@+id/favorites" android:title="@string/favorites"
+        android:orderInCategory="100" android:showAsAction="never" /> -->
+</menu>

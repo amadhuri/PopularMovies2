@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_radio_group"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   >
+
+   <TextView
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:text="Select Movie Sort Order"
+       android:paddingBottom="10dp"
+       android:textAppearance="?android:attr/textAppearanceMedium"
+       android:textColor="#000000"/>
+
+    <RadioButton android:id="@+id/most_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/most_popular"
+        android:onClick="onRadioButtonClicked"/>
+
+    <RadioButton android:id="@+id/highest_rated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/highest_rated"
+        android:onClick="onRadioButtonClicked"
+        />
+
+    <RadioButton android:id="@+id/favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favorites"
+        android:onClick="onRadioButtonClicked"/>
+</RadioGroup>
