@@ -3,6 +3,7 @@ package com.example.android.popularmovies2;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -33,12 +34,15 @@ public class MainActivity extends Activity implements OnMovieClickListener {
                     .add(R.id.container, new MoviesListFragment())
                     .commit();
         }*/
-        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME,0);
+        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        if(getResources().getBoolean(R.bool.landscape_only)) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
         MovieDetailFragment detailFrag = (MovieDetailFragment)getFragmentManager().findFragmentById(R.id.detail_frag);
         if (detailFrag != null) {
             final FragmentTransaction ft = getFragmentManager().beginTransaction();
@@ -46,9 +50,7 @@ public class MainActivity extends Activity implements OnMovieClickListener {
             ft.attach(detailFrag);
             ft.commit();
         }
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

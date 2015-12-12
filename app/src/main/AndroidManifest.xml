@@ -23,6 +23,7 @@
         <activity
             android:name=".MovieDetailActivity"
             android:label="@string/movie_details"
+            android:configChanges="orientation|screenSize"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

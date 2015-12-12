@@ -130,6 +130,12 @@ public class MovieDetailFragment extends Fragment {
         Log.e(TAG,"onResume calling activity name:"+getActivity().getClass().getSimpleName());
     }
 
+   /* @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+
+    }*/
+
     @Override
     public void onPause() {
         super.onPause();

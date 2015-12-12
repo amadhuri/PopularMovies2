@@ -94,7 +94,7 @@ public class MoviesListFragment extends Fragment {
         super.onResume();
 
         Log.e(TAG, "OnResume entered");
-        sharedPreferences = getActivity().getSharedPreferences(MainActivity.SHARED_PREF_NAME,0);
+        sharedPreferences = getActivity().getSharedPreferences(MainActivity.SHARED_PREF_NAME,Context.MODE_PRIVATE);
         sortOrder = sharedPreferences.getString(MainActivity.SHARED_PREF_KEY, getString(R.string.most_popular_value));
         Log.e(TAG,"OnResume shared pref sortOrder:"+sortOrder);
         boolean isConnected = checkInternetConnection();
